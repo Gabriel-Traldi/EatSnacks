@@ -48,29 +48,34 @@ export class SnackComponent implements OnInit {
       if (obj.description === 'Alface') {
         alface = true;
         this.price += obj.price;
-      }
-
-      if (obj.description === 'Bacon') {
-        bacon = true;
-        this.price += obj.price;
-      }
-
-      if (obj.description === 'Hambúrguer de carne') {
-        carne++;
-        if (carne === 3) {
-          carne = 0;
-        } else {
+      } else {
+        if (obj.description === 'Bacon') {
+          bacon = true;
           this.price += obj.price;
+        } else {
+
+          if (obj.description === 'Hambúrguer de carne') {
+            carne++;
+            if (carne === 3) {
+              carne = 0;
+            } else {
+              this.price += obj.price;
+            }
+          } else {
+            if (obj.description === 'Queijo') {
+              queijo++;
+              if (queijo === 3) {
+                queijo = 0;
+              } else {
+                this.price += obj.price;
+              }
+            } else {
+              this.price += obj.price;
+            }
+          }
         }
       }
-      if (obj.description === 'Queijo') {
-        queijo++;
-        if (queijo === 3) {
-          queijo = 0;
-        } else {
-          this.price += obj.price;
-        }
-      }
+
 
     });
 
