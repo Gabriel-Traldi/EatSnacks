@@ -1,0 +1,8 @@
+<p class="text-center text-muted" *ngIf="!snacks.length">
+  Desculpe, não há lanches
+</p>
+<div class="card-deck mb-3 text-center card-snickers" *ngFor="let cols of rows">
+  <div *ngFor="let snack of cols" class="card mb-4 box-shadow">
+    <app-snack [name]="snack.name" [snackIngredients]="snack.ingredients" [ingredients]="ingredients"></app-snack>
+  </div>
+</div>

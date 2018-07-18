@@ -1,0 +1,8 @@
+.card-snickers .card{
+  display: inline-block;
+  flex: initial;
+  width: 30.7%
+}
+.card-snickers .card:last-of-type{
+  margin-right: 0;
+}
